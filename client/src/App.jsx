@@ -16,6 +16,7 @@ import Login from "./pages/auth/Login";
 //import SavedJobs from "./pages/dashboard/SavedJobs";
 import CoverLetter from "./pages/dashboard/CoverLetter";
 import SavedJobs from "./pages/dashboard/SavedJobs";
+import Register from "./pages/auth/Register";
 
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
   element={<Login />}
 />
 
-
+<Route path="/register" element={<Register />} />
 
         {/* Dashboard Layout */}
 
