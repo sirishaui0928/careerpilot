@@ -12,7 +12,12 @@ const jobSearchRoutes = require("./routes/jobSearchRoutes");
 const coverLetterRoutes = require("./routes/coverLetterRoutes");
 
 dotenv.config();
-connectDB();
+connectDB()
+  .then(() => console.log("MongoDB connected"))
+  .catch((err) => {
+    console.error("DB connection failed:", err);
+    process.exit(1);
+  });
 
 const app = express();
 
@@ -53,6 +58,10 @@ app.get("/", (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+});
+
+server.on("error", (err) => {
+  console.error("Server error:", err);
 });
