@@ -1,8 +1,6 @@
 import axios from "axios";
 
-const API = axios.create({
-  baseURL: "http://localhost:5000/api",
-});
+const API = axios.create({ baseURL: "https://careerpilot-api.onrender.com/api", });
 
 export const registerUser = (data) =>
   API.post("/auth/register", data);
@@ -49,7 +47,7 @@ export const updateJob =
 
     const response =
       await axios.put(
-        `http://localhost:5000/api/jobs/${id}`,
+        `https://careerpilot-api.onrender.com/api/jobs/${id}`,
         jobData,
         {
           headers: {
