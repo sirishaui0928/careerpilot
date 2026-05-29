@@ -1,4 +1,4 @@
-const SavedJob = require("../models/savedJob");
+const SavedJob = require("../models/SavedJob");
 
 const saveJob =
     async (req, res) => {
