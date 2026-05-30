@@ -38,8 +38,11 @@ app.use(cors({
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
 }));
-
-app.options("*", cors());
+app.options("*",
+  cors({
+    origin: ["http://localhost:5173", "https://careerpilot-lilac-five.vercel.app"],
+    credentials: true
+  }));
 
 app.use(express.json());
 
