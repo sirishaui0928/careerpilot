@@ -32,8 +32,7 @@ const CoverLetter = () => {
 
         const res =
           await axios.post(
-
-            "http://localhost:5000/api/cover-letter/generate",
+  "https://careerpilot-api-c3dd.onrender.com/api/cover-letter/generate",
 
             {
               company,
