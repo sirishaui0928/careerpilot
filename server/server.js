@@ -26,12 +26,11 @@ const allowedOrigins = [
   "https://careerpilot-lilac-five.vercel.app"
 ];
 
-app.use(
-  cors({
-    origin: "https://careerpilot-lilac-five.vercel.app", credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-  }));
+app.use(cors({
+  origin: "https://careerpilot-lilac-five.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true,
+}));
 
 
 app.use(express.json());
