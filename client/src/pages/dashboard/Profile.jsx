@@ -91,7 +91,7 @@ max-w-2xl
 
             {user.resume ? (
               <a
-                href={`http://localhost:5000/${user.resume}`}
+                href={`https://careerpilot-api-c3dd.onrender.com/${user.resume}`}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-block mt-2 bg-blue-600 hover:bg-blue-700 px-5 py-3 rounded-xl dark:text-white"
