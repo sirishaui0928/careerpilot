@@ -1,4 +1,6 @@
 const express = require("express");
+app.use((req, res, next) => { console.log(req.method, req.url); next(); });
+const app = express();
 const dotenv = require("dotenv");
 const cors = require("cors");
 
@@ -19,7 +21,6 @@ connectDB()
     process.exit(1);
   });
 
-const app = express();
 
 const allowedOrigins = [
   "http://localhost:5173",
