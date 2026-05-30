@@ -59,14 +59,14 @@ const menuItems = [
 const Sidebar = () => {
   const location = useLocation();
   return (
-    <aside className="w-72 bg-white dark:bg-zinc-900 border-r border-zinc-200 dark:border-zinc-800 hidden md:flex flex-col">
+    <aside className="w-full md:w-72 bg-white dark:bg-zinc-900 border-r border-zinc-200 dark:border-zinc-800 flex flex-col">
 
       {/* Logo */}
      
 
 
 <div className="flex justify-center py-6">
-   <img src="/logo.png" alt="logo" className=" w-36 h-auto object-contain -ml-0 " />
+   <img src="/logo.png" alt="logo"  className="w-36 h-auto object-contain" />
     </div>
 
 
